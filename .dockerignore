@@ -1,0 +1,36 @@
+# Ambiente virtual
+venv
+.venv
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache
+
+# Git
+.git
+.gitignore
+
+# Ambiente local
+.env
+.env.*
+
+# IDEs
+.vscode
+.idea
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test coverage
+.coverage
+htmlcov/
+
+# Docker
+docker-compose.yml

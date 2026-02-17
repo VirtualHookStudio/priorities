@@ -1,0 +1,7 @@
+{
+    "taskId": "###taskid##",
+    "user": {
+        "id": "###id###"
+    },
+    "files": "###file###"
+}

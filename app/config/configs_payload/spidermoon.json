@@ -1,0 +1,10 @@
+{
+    "taskId": "###taskid##",
+    "prod": "###status###",
+    "mat": "###mat###",
+    "system": [
+        {"name": "###name###"},
+        {"value": "###name###"}
+    ],
+    "files": []
+}

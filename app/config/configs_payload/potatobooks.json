@@ -1,0 +1,12 @@
+{
+    "taskId": "###taskid##",
+    "status": "###status###",
+    "user": {
+        "email": "###email###"
+    },
+    "config": [
+        {"name": "###name###"},
+        {"value": "###value###"}
+    ],
+    "files": []
+}
