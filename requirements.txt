@@ -19,3 +19,4 @@ typing_extensions==4.15.0
 urllib3==2.6.3
 python-dotenv==1.2.1
 requests==2.31.0
+coverage==7.3.1

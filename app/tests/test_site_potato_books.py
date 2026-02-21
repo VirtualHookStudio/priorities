@@ -36,9 +36,7 @@ class TestSitePotatoBooks(unittest.TestCase):
                     "config": {"name": "theme", "value": "terror"},
                     "files": []
                 },
-                {
-                    "user_email": "testmessage@test.com"
-                }
+                {"user_email": "testmessage@test.com"}
             ), 
             {"status": "ok", "site": "PASSED"}
         )

@@ -1,6 +1,7 @@
 from app.src.sites.site_interface import siteInterface
 from app.src.aws.secret_manager_access import SecretManagerAccess
 import requests
+import logging
 
 
 class GenericSite(siteInterface):
@@ -28,13 +29,13 @@ class GenericSite(siteInterface):
   
 
   def requester(self, req: dict, opt: dict = {}) -> dict:
-    payload = self._build_payload(req, opt)
-    headers = self._build_headers(req, opt)
-    
     try:
+      payload = self._build_payload(req, opt)
+      headers = self._build_headers(req, opt)
+
       response = requests.post(self._url, json=payload, headers=headers)
       response.raise_for_status()
       return response.json()
     except Exception as e:
-      print(f"❌ {self.site_name}: {e}")
+      logging.error(f"Error in requester for {self.site_name}: {str(e)}")
       return req
