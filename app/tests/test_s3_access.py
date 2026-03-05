@@ -17,11 +17,11 @@ class TestS3Access(unittest.TestCase):
         self.MockLog = p2.start()
         self.mock_log_instance = MagicMock()
         self.MockLog.return_value = self.mock_log_instance
-        self.mock_log_instance.get_user.return_value = {
+        self.mock_log_instance.user = {
             "id": "123456", "email": "test@example.com", "name": "Test User"
         }
-        self.mock_log_instance.get_method.return_value = "CREATE"
-        self.mock_log_instance.get_time_info.return_value = "2024-01-01T00:00:00Z"
+        self.mock_log_instance.method= "CREATE"
+        self.mock_log_instance.time_info= "2024-01-01T00:00:00Z"
 
     def test_upload_file_success_flow(self):
 

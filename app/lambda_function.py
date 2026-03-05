@@ -32,8 +32,8 @@ def lambda_handler(event, context):
 
     log = Log()
 
-    log.set_user(user)
-    log.set_method(event['method'])
+    log.user = user
+    log.method = event['method']
 
     sites = event['sites']
 

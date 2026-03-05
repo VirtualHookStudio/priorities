@@ -28,14 +28,14 @@ class S3Access:
             log = Log()
 
             object_dict = {
-                'user': log.get_user(),
-                'method': log.get_method(),
-                'time_info': log.get_time_info(),
+                'user': log.user,
+                'method': log.method,
+                'time_info': log.time_info,
                 'responses': res
             }
 
             object_json = json.dumps(object_dict)
-
+            
             self.s3.put_object(Bucket=self.bucket_name, Key=file_name, Body=object_json)
             print(f"File {file_name} uploaded to {self.bucket_name}/{file_name}")
         except Exception as e:
